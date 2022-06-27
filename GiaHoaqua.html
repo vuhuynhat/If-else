@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT gia hoa qua</title>
+</head>
+
+<body>
+    <p>
+    <h1>Giá hoa quả</h1>
+    </p>
+    <input type="text" id="Ten" placeholder="Nhập tên hoa quả">
+    <button onclick="tinhgiahoaqua()">Xem giá</button>
+    <p id="result">
+        Giá
+    </p>
+
+
+    <script>
+        function tinhgiahoaqua() {
+            var nhapten = document.getElementById("Ten").value;
+            switch (nhapten == "Ổi" ? 1 :
+                nhapten == "Dưa Hấu" ? 2 :
+                nhapten == "Táo" ? 3 :
+                nhapten == "Xoài" ? 4 :
+                nhapten == "Cam" ? 5 :
+                nhapten == "Chôm Chôm" ? 6 :
+                nhapten == "Măng Cụt" ? 7 : 0) {
+                case 1:
+                    document.getElementById("result").innerHTML = "20000 VNĐ/kg";
+                    break;
+                case 2:
+                    document.getElementById("result").innerHTML = "20000 VNĐ/kg";
+                    break;
+                case 3:
+                    document.getElementById("result").innerHTML = "30000 VNĐ/kg";
+                    break;
+                case 4:
+                    document.getElementById("result").innerHTML = "30000 VNĐ/kg";
+                    break;
+                case 5:
+                    document.getElementById("result").innerHTML = "40000 VNĐ/kg";
+                    break;
+                case 6:
+                    document.getElementById("result").innerHTML = "40000 VNĐ/kg";
+                    break;
+                case 7:
+                    document.getElementById("result").innerHTML = "50000 VNĐ/kg";
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
