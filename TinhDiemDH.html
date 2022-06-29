@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diểm đại học</title>
+</head>
+
+<body>
+    <p>Môn toán</p>
+    <input type="text" id="Toan" placeholder="Nhập điểm toán">
+    <p>Môn văn</p>
+    <input type="text" id="Van" placeholder="Nhập điểm văn">
+    <p>Môn anh</p>
+    <input type="text" id="Anh" placeholder="Nhập điểm anh">
+    <p>Khu vực</p>
+    <select name="LuaChon" id="LuaChon">
+        <option value="1" id="op1">KV1</option>
+        <option value="2" id="op2">KV2-NT</option>
+        <option value="3" id="op3">KV2</option>
+        <option value="4" id="op4">KV3</option>
+    </select>
+    <button onclick="TDDH()">Tính điểm</button>
+    <p id="result" style="color:red">KQ</p>
+
+    <script>
+        
+        function TDDH() {
+            debugger
+            let Toan = +document.getElementById("Toan").value;
+            let Van = +document.getElementById("Van").value;
+            let Anh = +document.getElementById("Anh").value;
+            var Luachon = document.getElementById("LuaChon").value;
+            var KV1= document.getElementById("op1").value;
+            var KV2= document.getElementById("op2").value;
+            var KV3= document.getElementById("op3").value;
+            var KV4= document.getElementById("op4").value;
+            
+            switch (Luachon == KV1 ? 1 :Luachon == KV2 ? 2 : Luachon == KV3 ? 3 : Luachon == KV4 ? 4 : 0) { 
+                case 1: 
+                var DKV1 = Toan + Van + Anh + 0.75 ;
+                document.getElementById("result").innerHTML="Tổng điểm ĐH khối D của bạn là : " + DKV1;
+                break;
+                case 2: 
+                var DKV2 = Toan + Van + Anh +0.5 ;
+                document.getElementById("result").innerHTML="Tổng điểm ĐH khối D của bạn là : " + DKV2;
+                break;
+                case 3: 
+                var DKV3 = Toan + Van + Anh +0.25 ;
+                document.getElementById("result").innerHTML="Tổng điểm ĐH khối D của bạn là : " + DKV3;
+                break;
+                case 4: 
+                var DKV4 = Toan + Van + Anh  ;
+                document.getElementById("result").innerHTML="Tổng điểm ĐH khối D của bạn là : " + DKV4;
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
