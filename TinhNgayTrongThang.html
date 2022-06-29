@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh ngay trong thang</title>
+</head>
+
+<body>
+    <p>Tinh so ngay trong thang</p>
+    <input type="text" id="thang" placeholder="nhap vao so thang">
+    <p id="result"> Day la ket qua</p>
+    <button onclick="tinhthang()">Hien thi</button>
+</body>
+<script>
+    function tinhthang() {
+        let thang = document.getElementById("thang").value;
+        if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+           display = "day la thang co 31 ngay";
+        }
+        else if (thang == 4|| thang == 6 || thang == 9|| thang == 11 ) {
+           display = "day la thang co 30 ngay";
+        }
+        else if (thang == 2) {
+           display = "day la thang co 28 hoac 29 ngay";
+        }
+        else {
+            display = "nhap vao so tu 1 den 12";
+        }
+        document.getElementById("result").innerHTML = display;
+    }
+</script>
+
+</html>
