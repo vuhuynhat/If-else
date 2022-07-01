@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+
+<body>
+  
+        <h1>Ứng dụng chuyển dổi tiền tệ</h1>
+        <h2>Amount</h2>
+        <input type="text" id="GT" placeholder="Nhập giá tiền cần chuyển">
+        <h2>From Currency</h2>
+        <select id="FC">
+            <option value="1" id="op1">Việt Nam</option>
+            <option value="2" id="op2">USD</option>
+        </select>
+        <h2>To Currency</h2>
+        <select name="" id="TC">
+            <option value="3" id="op3">USD</option>
+            <option value="4" id="op4">Việt Nam</option>
+        </select>
+
+        <button style="background-color:rgb(174, 33, 202); color: rgb(244, 245, 246);" onclick="CDTT()"> Convert</button>
+
+        <p id="result">Kết quả</p>
+
+
+    <script>
+        function CDTT() {
+            let tien = +document.getElementById("GT").value;
+            let FC = document.getElementById("FC").value;
+            let TC = document.getElementById("TC").value;
+            let op1 = document.getElementById("op1").value;
+            let op2 = document.getElementById("op2").value;
+            let op3 = document.getElementById("op3").value;
+            let op4 = document.getElementById("op4").value;
+            if (FC == op1 && TC == op3) {
+                var KQ = tien * 0.000043;
+                document.getElementById("result").innerHTML = tien + " VNĐ bằng " + KQ + " USD ";
+            }
+            else if (FC == op2 && TC == op4) {
+                var KQ = tien * 23278.5;
+                document.getElementById("result").innerHTML = tien + " USD bằng " + KQ + " VNĐ ";
+            }
+            else { 
+                var KQ = tien ;
+                document.getElementById("result").innerHTML = tien;
+            }
+        }
+    </script>
+</body>
+
+</html>
